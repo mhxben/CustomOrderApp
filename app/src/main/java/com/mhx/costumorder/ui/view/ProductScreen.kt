@@ -13,7 +13,7 @@ fun ProductScreen(viewModel: ProductViewModel = viewModel()) {
     if (viewModel.isLoading){
         CircularProgressIndicator()
     }else{
-        LazyColumn {
+        LazyColumn {    
             items(viewModel.products){ product ->
                 Text(text = product.name)
                 Text(text = "${product.base_price} DA")
